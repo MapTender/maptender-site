@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MapTender | Google Business Profile setup and care for local businesses</title>
+<meta name="description" content="MapTender helps local businesses get their Google Maps and Google Business listing claimed, complete and looked after. $299 one-time setup, optional $149/month care plan.">
+<link rel="canonical" href="https://maptender.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MapTender">
+<meta property="og:title" content="MapTender | Your Google Maps listing, claimed and cared for">
+<meta property="og:description" content="We claim, complete and look after Google Business listings for local shops, restaurants, trades, auto and salons. $299 one-time setup.">
+<meta property="og:url" content="https://maptender.com/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MapTender | Your Google Maps listing, claimed and cared for">
+<meta name="twitter:description" content="We claim, complete and look after Google Business listings for local businesses. $299 one-time setup.">
+<meta name="theme-color" content="#0f5c4a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f5c4a'/%3E%3Cpath d='M32 12c-8.3 0-15 6.5-15 14.6C17 37.5 32 52 32 52s15-14.5 15-25.4C47 18.5 40.3 12 32 12z' fill='%23ffffff'/%3E%3Ccircle cx='32' cy='27' r='6' fill='%23f2b33d'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#0f5c4a; --green-dark:#0a4337; --green-soft:#e8f3ef;
+    --gold:#f2b33d; --ink:#17201d; --muted:#55615c; --line:#e3e8e6; --bg:#fbfcfb;
+    --radius:14px; --max:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--green)}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+  header.top{position:sticky;top:0;z-index:10;background:rgba(251,252,251,.92);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+  .brand svg{width:30px;height:30px}
+  .nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+  .nav ul a{color:var(--muted);text-decoration:none;font-weight:500;font-size:.95rem}
+  .nav ul a:hover{color:var(--ink)}
+  .btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:600;text-decoration:none;font-size:1rem;transition:background .15s,transform .15s;text-align:center}
+  .btn-primary{background:var(--green);color:#fff}
+  .btn-primary:hover{background:var(--green-dark)}
+  .btn-ghost{background:#fff;color:var(--green);border:1.5px solid var(--green)}
+  .btn-ghost:hover{background:var(--green-soft)}
+  .btn-sm{padding:9px 16px;font-size:.92rem}
+
+  .hero{padding:84px 0 72px;background:radial-gradient(1200px 400px at 85% -10%,#dcefe7 0,transparent 60%)}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+  .eyebrow{display:inline-block;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--green);background:var(--green-soft);padding:6px 12px;border-radius:999px}
+  h1{font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.12;letter-spacing:-.025em;margin:18px 0 16px}
+  .lead{font-size:1.15rem;color:var(--muted);max-width:34em;margin:0 0 28px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .card-mock{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 18px 40px -22px rgba(15,92,74,.35)}
+  .mock-map{height:120px;border-radius:12px;background:
+      linear-gradient(90deg,transparent 48%,#fff 48%,#fff 52%,transparent 52%),
+      linear-gradient(0deg,transparent 45%,#fff 45%,#fff 50%,transparent 50%),
+      linear-gradient(135deg,#d7ebe2,#eef6f2);position:relative}
+  .mock-map svg{position:absolute;left:50%;top:50%;transform:translate(-50%,-70%);width:38px;height:38px}
+  .mock-title{font-weight:700;margin:16px 0 4px}
+  .mock-row{display:flex;align-items:center;gap:10px;font-size:.93rem;color:var(--muted);padding:7px 0;border-top:1px solid var(--line)}
+  .mock-row:first-of-type{border-top:0}
+  .tick{flex:none;width:20px;height:20px;border-radius:50%;background:var(--green);display:grid;place-items:center}
+  .tick svg{width:12px;height:12px}
+
+  section{padding:72px 0}
+  section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  h2{font-size:clamp(1.6rem,3vw,2.1rem);letter-spacing:-.02em;margin:0 0 10px;line-height:1.2}
+  .sub{color:var(--muted);margin:0 0 36px;max-width:40em}
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .feature{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  section.alt .feature{background:var(--bg)}
+  .feature .ico{width:40px;height:40px;border-radius:10px;background:var(--green-soft);display:grid;place-items:center;margin-bottom:14px}
+  .feature .ico svg{width:22px;height:22px;stroke:var(--green)}
+  .feature h3{margin:0 0 6px;font-size:1.05rem}
+  .feature p{margin:0;color:var(--muted);font-size:.95rem}
+
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:500;font-size:.95rem}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+  .step{position:relative;padding:22px 22px 22px 22px;border-radius:var(--radius);background:var(--bg);border:1px solid var(--line)}
+  .step .num{width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;font-weight:700;display:grid;place-items:center;margin-bottom:12px}
+  .step h3{margin:0 0 6px;font-size:1.05rem}
+  .step p{margin:0;color:var(--muted);font-size:.95rem}
+
+  .pricing{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:860px}
+  .plan{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column}
+  .plan.main{border:2px solid var(--green);box-shadow:0 18px 40px -26px rgba(15,92,74,.5)}
+  .plan .tag{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--green)}
+  .plan h3{margin:6px 0 4px;font-size:1.2rem}
+  .price{font-size:2.4rem;font-weight:800;letter-spacing:-.02em;margin:6px 0 2px}
+  .price small{font-size:1rem;font-weight:500;color:var(--muted)}
+  .plan ul{list-style:none;padding:0;margin:16px 0 24px;flex:1}
+  .plan li{padding:6px 0 6px 28px;position:relative;color:var(--ink);font-size:.97rem}
+  .plan li::before{content:"";position:absolute;left:0;top:10px;width:16px;height:16px;border-radius:50%;background:var(--green-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.2 2.2 4.8-4.8' fill='none' stroke='%230f5c4a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+  .plan .btn{width:100%}
+  .fine{font-size:.85rem;color:var(--muted);margin-top:12px}
+  .note{margin-top:22px;font-size:.9rem;color:var(--muted);max-width:52em}
+
+  .contact-box{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .contact-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-decoration:none;color:var(--ink);display:block;transition:border-color .15s}
+  .contact-item:hover{border-color:var(--green)}
+  .contact-item .label{font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .contact-item .val{font-weight:600;font-size:1.05rem;margin-top:4px;word-break:break-word;color:var(--green)}
+
+  footer{background:var(--ink);color:#c9d3cf;padding:40px 0;font-size:.92rem}
+  footer .row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  footer strong{color:#fff}
+  footer a{color:#fff}
+  footer .disc{margin-top:18px;padding-top:18px;border-top:1px solid #2c3833;color:#9aa8a2;font-size:.85rem}
+
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr}
+    .grid-4{grid-template-columns:1fr 1fr}
+    .nav ul{display:none}
+  }
+  @media (max-width:640px){
+    .hero{padding:48px 0 48px}
+    section{padding:52px 0}
+    .grid-4,.steps,.pricing,.contact-box{grid-template-columns:1fr}
+    .cta-row .btn{flex:1 1 100%}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="MapTender home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0f5c4a"/><path d="M32 12c-8.3 0-15 6.5-15 14.6C17 37.5 32 52 32 52s15-14.5 15-25.4C47 18.5 40.3 12 32 12z" fill="#fff"/><circle cx="32" cy="27" r="6" fill="#f2b33d"/></svg>
+      MapTender
+    </a>
+    <ul>
+      <li><a href="#what">What we do</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary btn-sm" href="#contact">Get in touch</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Google Business listing help</span>
+        <h1>Your Google Maps listing, claimed, complete and looked after.</h1>
+        <p class="lead">MapTender helps local businesses get their Google Business Profile in order, so the people searching for you see the right hours, photos and contact details.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#pricing">See pricing</a>
+          <a class="btn btn-ghost" href="#contact">Ask a question</a>
+        </div>
+      </div>
+      <div class="card-mock" aria-hidden="true">
+        <div class="mock-map"><svg viewBox="0 0 64 64"><path d="M32 6c-10 0-18 7.8-18 17.5C14 36.6 32 58 32 58s18-21.4 18-34.5C50 13.8 42 6 32 6z" fill="#0f5c4a"/><circle cx="32" cy="24" r="7" fill="#f2b33d"/></svg></div>
+        <div class="mock-title">Your business listing</div>
+        <div class="mock-row"><span class="tick"><svg viewBox="0 0 16 16"><path d="M4 8.3l2.5 2.5L12 5.3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Claimed and verified</div>
+        <div class="mock-row"><span class="tick"><svg viewBox="0 0 16 16"><path d="M4 8.3l2.5 2.5L12 5.3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Hours, website and services filled in</div>
+        <div class="mock-row"><span class="tick"><svg viewBox="0 0 16 16"><path d="M4 8.3l2.5 2.5L12 5.3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Photos and categories added</div>
+        <div class="mock-row"><span class="tick"><svg viewBox="0 0 16 16"><path d="M4 8.3l2.5 2.5L12 5.3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Reviews answered</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="what" class="alt">
+    <div class="wrap">
+      <h2>What we do</h2>
+      <p class="sub">We handle the listing work most owners don't have time for.</p>
+      <div class="grid-4">
+        <div class="feature">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 4v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Claim or verify</h3>
+          <p>We help you claim your listing or finish Google's verification so you control it.</p>
+        </div>
+        <div class="feature">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 13h5M8 16h8"/></svg></div>
+          <h3>Fill in the details</h3>
+          <p>Hours, website, photos, services and the right categories, all accurate and complete.</p>
+        </div>
+        <div class="feature">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></div>
+          <h3>Reply to reviews</h3>
+          <p>Polite, timely replies to customer reviews, good and bad.</p>
+        </div>
+        <div class="feature">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></div>
+          <h3>Keep it current</h3>
+          <p>Holiday hours, new services and changes kept up to date over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="who">
+    <div class="wrap">
+      <h2>Who it's for</h2>
+      <p class="sub">Local businesses that customers find on Google Maps.</p>
+      <div class="chips">
+        <span class="chip">Local shops</span>
+        <span class="chip">Restaurants &amp; cafes</span>
+        <span class="chip">Plumbers, electricians &amp; trades</span>
+        <span class="chip">Auto repair &amp; body shops</span>
+        <span class="chip">Salons &amp; barbers</span>
+        <span class="chip">Other neighborhood businesses</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="alt">
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="sub">Three simple steps.</p>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h3>Reach out</h3><p>Email, call or text us with your business name. We'll look at your current listing.</p></div>
+        <div class="step"><div class="num">2</div><h3>We fix the listing</h3><p>We claim or verify it and fill in everything that's missing or out of date.</p></div>
+        <div class="step"><div class="num">3</div><h3>You get found</h3><p>Customers searching nearby see accurate hours, photos and ways to reach you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <h2>Pricing</h2>
+      <p class="sub">Simple and upfront.</p>
+      <div class="pricing">
+        <div class="plan main">
+          <span class="tag">One-time</span>
+          <h3>Listing setup</h3>
+          <div class="price">$299</div>
+          <ul>
+            <li>Claim or verify your listing</li>
+            <li>Hours, website, photos, services and categories</li>
+            <li>Replies to existing reviews</li>
+          </ul>
+          <a class="btn btn-primary" href="https://buy.stripe.com/4gM9AVdlj1FSgKJ2RngjC00" rel="noopener">Pay $299 setup</a>
+          <p class="fine">Secure checkout by Stripe.</p>
+        </div>
+        <div class="plan">
+          <span class="tag">Optional</span>
+          <h3>Care plan</h3>
+          <div class="price">$149<small>/month</small></div>
+          <ul>
+            <li>Ongoing replies to new reviews</li>
+            <li>Hours, photos and details kept up to date</li>
+            <li>Cancel anytime</li>
+          </ul>
+          <a class="btn btn-ghost" href="https://buy.stripe.com/9B64gBdlj1FSaml77DgjC01" rel="noopener">Start the $149/month care plan</a>
+          <p class="fine">Monthly subscription through Stripe. Cancel anytime.</p>
+        </div>
+      </div>
+      <p class="note">Not sure what you need? <a href="#contact">Reach out first</a> and we'll take a look at your listing. Google decides verification and search placement, so we can't promise rankings, but we'll do the work to get your listing claimed, accurate and complete.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="alt">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p class="sub">Questions are welcome. We'll get back to you.</p>
+      <div class="contact-box">
+        <a class="contact-item" href="mailto:maptender.business@outlook.com"><div class="label">Email</div><div class="val">maptender.business@outlook.com</div></a>
+        <a class="contact-item" href="tel:+15095645380"><div class="label">Phone</div><div class="val">(509) 564-5380</div></a>
+        <a class="contact-item" href="https://www.tiktok.com/@maptender" rel="noopener"><div class="label">TikTok</div><div class="val">@maptender</div></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <div><strong>MapTender</strong><br>3500 W Manchester Blvd Unit 478<br>Inglewood, CA 90305</div>
+      <div><a href="mailto:maptender.business@outlook.com">maptender.business@outlook.com</a><br><a href="tel:+15095645380">(509) 564-5380</a></div>
+    </div>
+    <div class="disc">MapTender is an independent service and is not affiliated with or endorsed by Google.<br>&copy; 2026 MapTender. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
