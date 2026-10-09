@@ -51,6 +51,11 @@
   .btn-ghost:hover{background:var(--green-soft)}
   .btn-sm{padding:9px 16px;font-size:.92rem}
 
+  .cta-short{display:none}
+  .nav{gap:18px}
+  .nav ul{gap:22px}
+  .nav ul a{white-space:nowrap}
+  .wrap.nav{max-width:1240px}
   .nav-actions{display:flex;align-items:center;gap:10px;flex:none}
   .nav-actions .btn{white-space:nowrap}
   .btn-tt{display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--ink);border:1.5px solid var(--line)}
@@ -72,6 +77,17 @@
   .ig-badge svg{width:24px;height:24px}
   footer .tt-link .ig-ico{width:14px;height:14px}
   .ig-ico{width:16px;height:16px;flex:none;display:block}
+  .contact-item.fb{background:#1877F2;border-color:#1877F2;color:#fff;display:flex;align-items:center;gap:14px}
+  .contact-item.fb:hover{background:#0f63d6;border-color:#0f63d6}
+  .contact-item.fb .label{color:rgba(255,255,255,.85)}
+  .contact-item.fb .val{color:#fff}
+  .contact-item.fb .go{font-size:.88rem;color:rgba(255,255,255,.92);margin-top:2px}
+  .fb-badge{flex:none;width:46px;height:46px;border-radius:12px;background:#fff;color:#1877F2;display:grid;place-items:center}
+  .fb-badge svg{width:26px;height:26px}
+  .btn-tt .fb-ico{color:#1877F2}
+  .fb-ico{width:16px;height:16px;flex:none;display:block}
+  footer .tt-link .fb-ico{width:14px;height:14px;color:#fff}
+  .contact-box .contact-item.wide{grid-column:span 3}
   footer .tt-link{display:inline-flex;align-items:center;gap:6px}
   footer .tt-link .tt-ico{width:14px;height:14px}
 
@@ -128,7 +144,8 @@
   .fine{font-size:.85rem;color:var(--muted);margin-top:12px}
   .note{margin-top:22px;font-size:.9rem;color:var(--muted);max-width:52em}
 
-  .contact-box{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .contact-box{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+  .contact-box > .contact-item{grid-column:span 2}
   .contact-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;text-decoration:none;color:var(--ink);display:block;transition:border-color .15s}
   .contact-item:hover{border-color:var(--green)}
   .contact-item .label{font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
@@ -140,6 +157,10 @@
   footer a{color:#fff}
   footer .disc{margin-top:18px;padding-top:18px;border-top:1px solid #2c3833;color:#9aa8a2;font-size:.85rem}
 
+  @media (max-width:1240px){
+    .btn-tt .tt-txt{display:none}
+    .btn-tt{padding-left:10px;padding-right:10px}
+  }
   @media (max-width:900px){
     .hero-grid{grid-template-columns:1fr}
     .grid-4{grid-template-columns:1fr 1fr}
@@ -149,6 +170,7 @@
     .hero{padding:48px 0 48px}
     section{padding:52px 0}
     .grid-4,.steps,.pricing,.contact-box{grid-template-columns:1fr}
+    .contact-box > .contact-item,.contact-box .contact-item.wide{grid-column:auto}
     .cta-row .btn{flex:1 1 100%}
     .nav-actions{gap:8px}
     .nav-actions .btn-sm{padding:8px 11px;font-size:.88rem}
@@ -158,13 +180,18 @@
     .wrap.nav{padding:0 16px}
   }
   @media (max-width:520px){
-    .btn-tt .tt-txt{display:none}
-    .btn-tt{padding:8px 10px}
+    .cta-long{display:none}
+    .cta-short{display:inline}
+    .nav-actions{gap:6px}
+    .nav-actions .btn-tt{padding:7px 8px}
+    .nav-actions .btn-primary{padding:8px 12px}
+    .brand{gap:6px;font-size:1rem}
+    .nav{gap:8px}
     .brand img{width:34px;height:34px}
   }
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"MapTender","url":"https://maptender.com","logo":"https://maptender.com/logo.png","sameAs":["https://www.tiktok.com/@maptender","https://www.instagram.com/map.tender/"]}
+{"@context":"https://schema.org","@type":"Organization","name":"MapTender","url":"https://maptender.com","logo":"https://maptender.com/logo.png","sameAs":["https://www.tiktok.com/@maptender","https://www.instagram.com/map.tender/","https://www.facebook.com/p/MapTender-61595275199403/"]}
 </script>
 </head>
 <body>
@@ -184,7 +211,8 @@
     <div class="nav-actions">
       <a class="btn btn-sm btn-tt" href="https://www.tiktok.com/@maptender" target="_blank" rel="noopener" aria-label="MapTender on TikTok"><svg class="tt-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg><span class="tt-txt">TikTok</span></a>
       <a class="btn btn-sm btn-tt" href="https://www.instagram.com/map.tender/" target="_blank" rel="noopener" aria-label="MapTender on Instagram"><svg class="ig-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg><span class="tt-txt">Instagram</span></a>
-      <a class="btn btn-primary btn-sm" href="#contact">Get in touch</a>
+      <a class="btn btn-sm btn-tt" href="https://www.facebook.com/p/MapTender-61595275199403/" target="_blank" rel="noopener" aria-label="MapTender on Facebook"><svg class="fb-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></svg><span class="tt-txt">Facebook</span></a>
+      <a class="btn btn-primary btn-sm" href="#contact"><span class="cta-long">Get in touch</span><span class="cta-short">Contact</span></a>
     </div>
   </div>
 </header>
@@ -307,10 +335,11 @@
       <h2>Contact</h2>
       <p class="sub">Questions are welcome. We'll get back to you.</p>
       <div class="contact-box">
-        <a class="contact-item" href="mailto:maptender.business@outlook.com"><div class="label">Email</div><div class="val">maptender.business@outlook.com</div></a>
-        <a class="contact-item" href="tel:+15095645380"><div class="label">Phone</div><div class="val">(509) 564-5380</div></a>
+        <a class="contact-item wide" href="mailto:maptender.business@outlook.com"><div class="label">Email</div><div class="val">maptender.business@outlook.com</div></a>
+        <a class="contact-item wide" href="tel:+15095645380"><div class="label">Phone</div><div class="val">(509) 564-5380</div></a>
         <a class="contact-item tt" href="https://www.tiktok.com/@maptender" target="_blank" rel="noopener"><span class="tt-badge"><svg class="" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></span><span><div class="label">TikTok</div><div class="val">@maptender</div><div class="go">Follow us on TikTok &rarr;</div></span></a>
         <a class="contact-item ig" href="https://www.instagram.com/map.tender/" target="_blank" rel="noopener"><span class="ig-badge"><svg class="" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg></span><span><div class="label">Instagram</div><div class="val">@map.tender</div><div class="go">Follow us on Instagram &rarr;</div></span></a>
+        <a class="contact-item fb" href="https://www.facebook.com/p/MapTender-61595275199403/" target="_blank" rel="noopener"><span class="fb-badge"><svg class="" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></svg></span><span><div class="label">Facebook</div><div class="val">MapTender</div><div class="go">Follow us on Facebook &rarr;</div></span></a>
       </div>
     </div>
   </section>
@@ -320,7 +349,7 @@
   <div class="wrap">
     <div class="row">
       <div><strong>MapTender</strong><br>3500 W Manchester Blvd Unit 478<br>Inglewood, CA 90305</div>
-      <div><a href="mailto:maptender.business@outlook.com">maptender.business@outlook.com</a><br><a href="tel:+15095645380">(509) 564-5380</a><br><a class="tt-link" href="https://www.tiktok.com/@maptender" target="_blank" rel="noopener"><svg class="tt-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>TikTok @maptender</a><br><a class="tt-link" href="https://www.instagram.com/map.tender/" target="_blank" rel="noopener"><svg class="ig-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>Instagram @map.tender</a></div>
+      <div><a href="mailto:maptender.business@outlook.com">maptender.business@outlook.com</a><br><a href="tel:+15095645380">(509) 564-5380</a><br><a class="tt-link" href="https://www.tiktok.com/@maptender" target="_blank" rel="noopener"><svg class="tt-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>TikTok @maptender</a><br><a class="tt-link" href="https://www.instagram.com/map.tender/" target="_blank" rel="noopener"><svg class="ig-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>Instagram @map.tender</a><br><a class="tt-link" href="https://www.facebook.com/p/MapTender-61595275199403/" target="_blank" rel="noopener"><svg class="fb-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></svg>Facebook: MapTender</a></div>
     </div>
     <div class="disc">MapTender is an independent service and is not affiliated with or endorsed by Google.<br>&copy; 2026 MapTender. All rights reserved.</div>
   </div>
