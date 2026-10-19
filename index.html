@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MapTender | Google Business Profile setup and care for local businesses</title>
-<meta name="description" content="MapTender helps local businesses get their Google Maps and Google Business listing claimed, complete and looked after. $299 setup, $99/mo care plan, review replies, and social posts.">
+<meta name="description" content="MapTender helps local businesses get their Google Maps and Google Business listing claimed, complete and looked after. $99/mo care plan with review replies included, $299 one-time setup, and social posts.">
 <link rel="canonical" href="https://maptender.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MapTender">
@@ -131,7 +131,7 @@
   .step p{margin:0;color:var(--muted);font-size:.95rem}
 
   .pricing{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:960px}
-  .pricing.addons{grid-template-columns:repeat(3,1fr);max-width:960px;margin-top:20px}
+  .pricing.addons{grid-template-columns:1fr 1fr;max-width:960px;margin-top:20px}
   .samples{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:960px}
   .sample{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
   .sample img{width:100%;height:auto;display:block;aspect-ratio:4/5;object-fit:cover;background:#0a1628}
@@ -139,6 +139,8 @@
   .sample .cap strong{display:block;color:var(--ink);font-size:.95rem;margin-bottom:2px}
   .plan{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column}
   .plan.main{border:2px solid var(--green);box-shadow:0 18px 40px -26px rgba(15,92,74,.5)}
+  .plan{position:relative}
+  .plan .badge{position:absolute;top:-13px;right:20px;background:var(--gold);color:var(--ink);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:5px 12px;border-radius:999px}
   .plan .tag{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--green)}
   .plan h3{margin:6px 0 4px;font-size:1.2rem}
   .price{font-size:2.4rem;font-weight:800;letter-spacing:-.02em;margin:6px 0 2px}
@@ -170,7 +172,7 @@
   @media (max-width:900px){
     .hero-grid{grid-template-columns:1fr}
     .grid-4{grid-template-columns:1fr 1fr}
-    .pricing.addons,.samples{grid-template-columns:1fr 1fr}
+    .samples{grid-template-columns:1fr 1fr}
     .nav ul{display:none}
   }
   @media (max-width:640px){
@@ -201,7 +203,6 @@
 {"@context":"https://schema.org","@type":"Organization","name":"MapTender","url":"https://maptender.com","logo":"https://maptender.com/logo.png","sameAs":["https://www.tiktok.com/@maptender","https://www.instagram.com/map.tender/","https://www.facebook.com/p/MapTender-61595275199403/"],"makesOffer":[
 {"@type":"Offer","name":"Listing setup","price":"299","priceCurrency":"USD","description":"One-time Google Business Profile claim, verify and complete."},
 {"@type":"Offer","name":"Care plan","price":"99","priceCurrency":"USD","description":"Monthly care plan including Google review replies, hours and info updates, 4 Google posts a month, photo updates, and a monthly report.","priceSpecification":{"@type":"UnitPriceSpecification","price":"99","priceCurrency":"USD","unitText":"MONTH"}},
-{"@type":"Offer","name":"Review replies only","price":"49","priceCurrency":"USD","description":"We write replies to your Google reviews; you post them or give us manager access.","priceSpecification":{"@type":"UnitPriceSpecification","price":"49","priceCurrency":"USD","unitText":"MONTH"}},
 {"@type":"Offer","name":"Social posts","price":"129","priceCurrency":"USD","description":"12 posts plus 4 short videos a month; you post them on your own accounts.","priceSpecification":{"@type":"UnitPriceSpecification","price":"129","priceCurrency":"USD","unitText":"MONTH"}},
 {"@type":"Offer","name":"Care plan + social bundle","price":"199","priceCurrency":"USD","description":"Care plan plus social posts, billed monthly.","priceSpecification":{"@type":"UnitPriceSpecification","price":"199","priceCurrency":"USD","unitText":"MONTH"}}
 ]}
@@ -312,9 +313,9 @@
   <section id="pricing">
     <div class="wrap">
       <h2>Pricing</h2>
-      <p class="sub">Simple and upfront.</p>
+      <p class="sub">Simple and upfront. Monthly care starts at $99.</p>
       <div class="pricing">
-        <div class="plan main">
+        <div class="plan">
           <span class="tag">One-time</span>
           <h3>Listing setup</h3>
           <div class="price">$299</div>
@@ -323,10 +324,11 @@
             <li>Hours, website, photos, services and categories</li>
             <li>Replies to existing reviews</li>
           </ul>
-          <a class="btn btn-primary" href="https://buy.stripe.com/4gM9AVdlj1FSgKJ2RngjC00" target="_blank" rel="noopener">Buy setup – $299</a>
+          <a class="btn btn-ghost" href="https://buy.stripe.com/4gM9AVdlj1FSgKJ2RngjC00" target="_blank" rel="noopener">Buy setup – $299</a>
           <p class="fine">Secure checkout by Stripe.</p>
         </div>
-        <div class="plan">
+        <div class="plan main">
+          <span class="badge">Most popular</span>
           <span class="tag">Monthly</span>
           <h3>Care plan</h3>
           <div class="price">$99<small>/month</small></div>
@@ -338,23 +340,11 @@
             <li>Monthly report (calls, directions, views)</li>
             <li>Cancel anytime</li>
           </ul>
-          <a class="btn btn-ghost" href="https://buy.stripe.com/4gMaEZftrdoA1PP8bHgjC05" target="_blank" rel="noopener">Buy care plan – $99/mo</a>
+          <a class="btn btn-primary" href="https://buy.stripe.com/4gMaEZftrdoA1PP8bHgjC05" target="_blank" rel="noopener">Buy care plan – $99/mo</a>
           <p class="fine">Monthly subscription through Stripe. Cancel anytime.</p>
         </div>
       </div>
       <div class="pricing addons">
-        <div class="plan">
-          <span class="tag">Add-on</span>
-          <h3>Review replies only</h3>
-          <div class="price">$49<small>/month</small></div>
-          <ul>
-            <li>For businesses not on the care plan</li>
-            <li>We write replies to your Google reviews</li>
-            <li>You post them, or give us manager access</li>
-          </ul>
-          <a class="btn btn-ghost" href="https://buy.stripe.com/7sY6oJ5SRckw9ih3VrgjC02" target="_blank" rel="noopener">Buy review replies – $49/mo</a>
-          <p class="fine">Monthly subscription through Stripe. Cancel anytime.</p>
-        </div>
         <div class="plan">
           <span class="tag">Add-on</span>
           <h3>Social posts</h3>
