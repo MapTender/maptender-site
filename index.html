@@ -198,6 +198,11 @@
     .nav{gap:8px}
     .brand img{width:34px;height:34px}
   }
+  .about{display:grid;grid-template-columns:240px 1fr;gap:40px;align-items:center;max-width:900px}
+  .about img{width:240px;height:240px;border-radius:50%;object-fit:cover;display:block}
+  .about-name{margin:0 0 10px;font-size:1.1rem}
+  .foot-links a{margin-right:14px}
+  @media (max-width:700px){.about{grid-template-columns:1fr;gap:20px}.about img{width:180px;height:180px}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"MapTender","url":"https://maptender.com","logo":"https://maptender.com/logo.png","email":"hello@maptender.com","makesOffer":[
@@ -218,6 +223,7 @@
       <li><a href="#what">What we do</a></li>
       <li><a href="#how">How it works</a></li>
       <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-actions">
@@ -344,6 +350,17 @@
   </section>
 
 
+  <section id="about">
+    <div class="wrap about">
+      <img src="kwaday.jpg" alt="Kwaday Corppetts, founder of MapTender" width="600" height="600" loading="lazy">
+      <div>
+        <h2>About</h2>
+        <h3 class="about-name">Kwaday Corppetts, founder</h3>
+        <p>I started MapTender to help local businesses get found and called from Google Maps. I do the work on your listing myself, so you deal with one person from start to finish. You can reach me directly at <a href="mailto:hello@maptender.com">hello@maptender.com</a> or <a href="tel:+15095645380">(509) 564-5380</a>.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="alt">
     <div class="wrap">
       <h2>Contact</h2>
@@ -362,6 +379,7 @@
       <div><strong>MapTender</strong><br>4001 Inglewood Ave, STE 101628<br>Redondo Beach, CA 90278</div>
       <div><a href="mailto:hello@maptender.com">hello@maptender.com</a><br><a href="tel:+15095645380">(509) 564-5380</a></div>
     </div>
+    <div class="disc foot-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div>
     <div class="disc">MapTender is an independent service and is not affiliated with or endorsed by Google.<br>&copy; 2026 MapTender. All rights reserved.</div>
   </div>
 </footer>
